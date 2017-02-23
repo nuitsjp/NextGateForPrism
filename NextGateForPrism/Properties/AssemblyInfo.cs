@@ -1,16 +1,17 @@
 ﻿using System.Resources;
 using System.Reflection;
-using Xamarin.Forms.Xaml;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 
 // アセンブリに関する一般情報は以下の属性セットをとおして制御されます。
 // アセンブリに関連付けられている情報を変更するには、
 // これらの属性値を変更してください。
-[assembly: AssemblyTitle("EmployeeManager.Views")]
+[assembly: AssemblyTitle("NextGateForPrism")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("EmployeeManager.Views")]
-[assembly: AssemblyCopyright("Copyright (C) Microsoft 2017")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("NextGateForPrism")]
+[assembly: AssemblyCopyright("Copyright (C)  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: NeutralResourcesLanguage("ja")]
