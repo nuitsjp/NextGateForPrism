@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManager", "EmployeeManager\EmployeeManager\EmployeeManager.csproj", "{C71FB32D-068D-4076-AF33-3E80AC16B894}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManager", "EmployeeManager\EmployeeManager.csproj", "{C71FB32D-068D-4076-AF33-3E80AC16B894}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManager.Droid", "EmployeeManager\EmployeeManager.Droid\EmployeeManager.Droid.csproj", "{49734156-51D5-49AF-A30F-EBC2565B116A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManager.Droid", "EmployeeManager.Droid\EmployeeManager.Droid.csproj", "{49734156-51D5-49AF-A30F-EBC2565B116A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManager.iOS", "EmployeeManager\EmployeeManager.iOS\EmployeeManager.iOS.csproj", "{163AF903-72EF-44C4-A1A2-D218754A6E97}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManager.iOS", "EmployeeManager.iOS\EmployeeManager.iOS.csproj", "{163AF903-72EF-44C4-A1A2-D218754A6E97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManager.UWP", "EmployeeManager\EmployeeManager.UWP\EmployeeManager.UWP.csproj", "{FCAECCF5-FBB8-4C5F-9C6C-2C890A9A156E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManager.UWP", "EmployeeManager.UWP\EmployeeManager.UWP.csproj", "{FCAECCF5-FBB8-4C5F-9C6C-2C890A9A156E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
