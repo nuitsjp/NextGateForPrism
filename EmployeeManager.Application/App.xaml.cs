@@ -1,7 +1,7 @@
-﻿using Prism.Unity;
-using EmployeeManager.Views;
+﻿using EmployeeManager.Views;
+using Prism.Unity;
 
-namespace EmployeeManager
+namespace EmployeeManager.Application
 {
     public partial class App : PrismApplication
     {

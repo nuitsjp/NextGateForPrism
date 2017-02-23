@@ -1,18 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
-using Prism.Unity;
+﻿using Prism.Unity;
 using Microsoft.Practices.Unity;
 
 namespace EmployeeManager.UWP
@@ -23,7 +9,7 @@ namespace EmployeeManager.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new EmployeeManager.App(new UwpInitializer()));
+            LoadApplication(new Application.App(new UwpInitializer()));
         }
     }
 

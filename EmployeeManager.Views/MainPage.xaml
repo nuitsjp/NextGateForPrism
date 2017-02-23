@@ -4,8 +4,11 @@
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="EmployeeManager.Views.MainPage"
-             Title="MainPage">
+             xmlns:viewModels="clr-namespace:EmployeeManager.ViewModels;assembly=EmployeeManager.ViewModels"
+             Title="Menu">
   <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
-    <Label Text="{Binding Title}" />
+    <Button Text="Section List" Command="{Binding NavigationSectionListCommand}"/>
+    <Button Text="DeepLink by Literal" Command="{Binding DeepLinkByLiteralCommand}"/>
+    <Button Text="DeepLink by ViewModel" Command="{Binding DeepLinkByViewModelCommand}"/>
   </StackLayout>
 </ContentPage>

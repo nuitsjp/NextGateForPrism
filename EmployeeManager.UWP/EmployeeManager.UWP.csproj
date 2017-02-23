@@ -128,9 +128,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EmployeeManager\EmployeeManager.csproj">
-      <Project>{c71fb32d-068d-4076-af33-3e80ac16b894}</Project>
-      <Name>EmployeeManager</Name>
+    <ProjectReference Include="..\EmployeeManager.Application\EmployeeManager.Application.csproj">
+      <Project>{28f80f49-bfa3-43fd-a123-542f66579c59}</Project>
+      <Name>EmployeeManager.Application</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

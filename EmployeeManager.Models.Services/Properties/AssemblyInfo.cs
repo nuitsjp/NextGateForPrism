@@ -1,16 +1,15 @@
 ﻿using System.Resources;
 using System.Reflection;
-using Xamarin.Forms.Xaml;
 
 // アセンブリに関する一般情報は以下の属性セットをとおして制御されます。
 // アセンブリに関連付けられている情報を変更するには、
 // これらの属性値を変更してください。
-[assembly: AssemblyTitle("EmployeeManager.Views")]
+[assembly: AssemblyTitle("EmployeeManager.Models.Services")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("EmployeeManager.Views")]
-[assembly: AssemblyCopyright("Copyright (C) Microsoft 2017")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("EmployeeManager.Models.Services")]
+[assembly: AssemblyCopyright("Copyright (C)  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: NeutralResourcesLanguage("ja")]
@@ -27,5 +26,3 @@ using Xamarin.Forms.Xaml;
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
-
-[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
