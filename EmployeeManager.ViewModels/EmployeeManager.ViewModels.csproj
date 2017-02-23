@@ -36,7 +36,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="LocalViewModelLocator.cs" />
+    <Compile Include="DesignTimeViewModelLocator.cs" />
     <Compile Include="MainPageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SectionListPageViewModel.cs" />
