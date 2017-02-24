@@ -4,7 +4,7 @@ using System.Reflection;
 
 namespace NextGateForPrism
 {
-    public static class ViewTypeToViewModelTypeResolver
+    public static class PageNavigationTypeResolver
     {
         private static readonly Dictionary<Assembly, Assembly> Assemblies = new Dictionary<Assembly, Assembly>();
 
@@ -26,7 +26,7 @@ namespace NextGateForPrism
             return result;
         }
 
-        public static Type Resolve(Type viewType)
+        public static Type ResolveForViewModelType(Type viewType)
         {
             if (viewType == null) throw new ArgumentNullException(nameof(viewType));
 

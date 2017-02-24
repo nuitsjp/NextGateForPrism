@@ -1,4 +1,9 @@
-﻿namespace NextGateForPrism.Unity.Forms
+﻿using Microsoft.Practices.Unity;
+using Prism.Mvvm;
+using Prism.Unity;
+using Xamarin.Forms;
+
+namespace NextGateForPrism.Unity.Forms
 {
     public static class UnityContainerExtensions
     {
@@ -8,7 +13,7 @@
         {
             var viewType = typeof(TView);
             ViewModelLocationProvider.Register(viewType.ToString(), typeof(TViewModel));
-            return container.RegisterTypeForNavigation(viewType, typeof(TViewModel).FullName);
+            return container.RegisterTypeForNavigation(viewType, typeof(TViewModel).Name);
         }
     }
 }

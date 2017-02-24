@@ -14,8 +14,8 @@ namespace EmployeeManager.Application
         protected override void ConfigureContainer()
         {
             base.ConfigureContainer();
-            ViewTypeToViewModelTypeResolver.AssignAssemblies<MainPage, MainPageViewModel>();
-            ViewModelLocationProvider.SetDefaultViewTypeToViewModelTypeResolver(ViewTypeToViewModelTypeResolver.Resolve);
+            PageNavigationTypeResolver.AssignAssemblies<MainPage, MainPageViewModel>();
+            ViewModelLocationProvider.SetDefaultViewTypeToViewModelTypeResolver(PageNavigationTypeResolver.ResolveForViewModelType);
         }
 
         protected override void OnInitialized()
