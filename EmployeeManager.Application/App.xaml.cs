@@ -1,4 +1,8 @@
-﻿using EmployeeManager.Views;
+﻿using System.Reflection;
+using EmployeeManager.ViewModels;
+using EmployeeManager.Views;
+using NextGateForPrism;
+using Prism.Mvvm;
 using Prism.Unity;
 
 namespace EmployeeManager.Application
@@ -6,6 +10,13 @@ namespace EmployeeManager.Application
     public partial class App : PrismApplication
     {
         public App(IPlatformInitializer initializer = null) : base(initializer) { }
+
+        protected override void ConfigureContainer()
+        {
+            base.ConfigureContainer();
+            ViewTypeToViewModelTypeResolver.AssignAssemblies<MainPage, MainPageViewModel>();
+            ViewModelLocationProvider.SetDefaultViewTypeToViewModelTypeResolver(ViewTypeToViewModelTypeResolver.Resolve);
+        }
 
         protected override void OnInitialized()
         {

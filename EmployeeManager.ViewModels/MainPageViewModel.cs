@@ -11,10 +11,6 @@ namespace EmployeeManager.ViewModels
         public DelegateCommand DeepLinkByLiteralCommand { get; }
         public DelegateCommand DeepLinkByViewModelCommand { get; }
 
-        public MainPageViewModel()
-        {
-            
-        }
         public MainPageViewModel(INavigationService navigationService)
         {
             _navigationService = navigationService;

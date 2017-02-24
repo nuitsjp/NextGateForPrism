@@ -32,23 +32,9 @@ namespace NextGateForPrism.Tests
         [Fact]
         public void ResolveWhenPageOfDifferentAssembly()
         {
-            ViewTypeToViewModelTypeResolver.MappingAssemblies(typeof(TestPage).GetTypeInfo().Assembly, typeof(TestPageViewModel).GetTypeInfo().Assembly);
+            ViewTypeToViewModelTypeResolver.AssignAssemblies<TestPage, TestPageViewModel>();
             var actual = ViewTypeToViewModelTypeResolver.Resolve(typeof(TestPage));
             Assert.Equal(typeof(TestPageViewModel), actual);
-        }
-
-        [Fact]
-        public void MappingAssembliesWhenViewTypeAssemblyIsNull()
-        {
-            Assert.Throws<ArgumentNullException>(
-                () => ViewTypeToViewModelTypeResolver.MappingAssemblies(null, GetType().GetTypeInfo().Assembly));
-        }
-
-        [Fact]
-        public void MappingAssembliesWhenViewModelTypeAssemblyIsNull()
-        {
-            Assert.Throws<ArgumentNullException>(
-                () => ViewTypeToViewModelTypeResolver.MappingAssemblies(GetType().GetTypeInfo().Assembly, null));
         }
     }
 

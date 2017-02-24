@@ -8,11 +8,10 @@ namespace NextGateForPrism
     {
         private static readonly Dictionary<Assembly, Assembly> Assemblies = new Dictionary<Assembly, Assembly>();
 
-        public static void MappingAssemblies(Assembly viewAssembly, Assembly viewModelAssembly)
+        public static void AssignAssemblies<TView, TViewModel>()
         {
-            if (viewAssembly == null) throw new ArgumentNullException(nameof(viewAssembly));
-            if (viewModelAssembly == null) throw new ArgumentNullException(nameof(viewModelAssembly));
-
+            var viewAssembly = typeof(TView).GetTypeInfo().Assembly;
+            var viewModelAssembly = typeof(TViewModel).GetTypeInfo().Assembly;
             Assemblies[viewAssembly] = viewModelAssembly;
         }
 
