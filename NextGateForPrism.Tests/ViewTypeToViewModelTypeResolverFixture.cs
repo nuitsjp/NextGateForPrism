@@ -8,6 +8,11 @@ namespace NextGateForPrism.Tests
 {
     public class ViewTypeToViewModelTypeResolverFixture
     {
+        public ViewTypeToViewModelTypeResolverFixture()
+        {
+            PageNavigationTypeResolver.Clear();
+        }
+
         [Fact]
         public void ResolveForViewModelTypeWhenArgumentIsNull()
         {
@@ -34,6 +39,39 @@ namespace NextGateForPrism.Tests
             PageNavigationTypeResolver.AssignAssemblies<TestPage, TestPageViewModel>();
             var actual = PageNavigationTypeResolver.ResolveForViewModelType(typeof(TestPage));
             Assert.Equal(typeof(TestPageViewModel), actual);
+        }
+
+        [Fact]
+        public void ResolveForViewTypeWhenViewOfSameAssembly()
+        {
+            var actual = PageNavigationTypeResolver.ResolveForViewType<MockViewModel>();
+            Assert.Equal(typeof(MockView), actual);
+        }
+
+        [Fact]
+        public void ResolveForViewTypeWhenPageOfSameAssembly()
+        {
+            var actual = PageNavigationTypeResolver.ResolveForViewType<MockPageViewModel>();
+            Assert.Equal(typeof(MockPage), actual);
+        }
+
+        [Fact]
+        public void ResolveForViewTypeWhenDifferentAssembly()
+        {
+            PageNavigationTypeResolver.AssignAssemblies<TestPage, TestPageViewModel>();
+            var actual = PageNavigationTypeResolver.ResolveForViewType<TestPageViewModel>();
+            Assert.Equal(typeof(TestPage), actual);
+        }
+
+
+        [Fact]
+        public void Clear()
+        {
+            PageNavigationTypeResolver.AssignAssemblies<TestPage, TestPageViewModel>();
+            PageNavigationTypeResolver.Clear();
+
+            Assert.Null(PageNavigationTypeResolver.ResolveForViewModelType(typeof(TestPage)));
+            Assert.Null(PageNavigationTypeResolver.ResolveForViewType<TestPageViewModel>());
         }
     }
 
