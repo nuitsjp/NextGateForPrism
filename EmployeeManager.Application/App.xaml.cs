@@ -22,7 +22,7 @@ namespace EmployeeManager.Application
         {
             InitializeComponent();
 
-            NavigationService.NavigateAsync("MainPage?title=Hello%20from%20Xamarin.Forms");
+            NavigationService.NavigateAsync<MainPageViewModel>();
         }
 
         protected override void RegisterTypes()

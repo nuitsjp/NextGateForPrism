@@ -8,7 +8,7 @@
     <ProjectGuid>{A40E1AEB-FFC8-49FC-A844-A9F6DC226912}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NextGateForPrism.Forms</RootNamespace>
+    <RootNamespace>NextGateForPrism</RootNamespace>
     <AssemblyName>NextGateForPrism.Forms</AssemblyName>
     <DefaultLanguage>ja-JP</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
@@ -63,6 +63,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NextGateForPrism\NextGateForPrism.csproj">
+      <Project>{7614E658-F030-416B-8448-37412A1BB048}</Project>
+      <Name>NextGateForPrism</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.2.127\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.2.127\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
