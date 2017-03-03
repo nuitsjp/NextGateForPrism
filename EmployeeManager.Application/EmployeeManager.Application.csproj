@@ -86,6 +86,18 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EmployeeManager.Models.Services.Local\EmployeeManager.Models.Services.Local.csproj">
+      <Project>{701b47dd-bc4e-4c6d-9204-edf74962bff8}</Project>
+      <Name>EmployeeManager.Models.Services.Local</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmployeeManager.Models.Services\EmployeeManager.Models.Services.csproj">
+      <Project>{99957e23-626c-4d84-aeea-bb0ae3d1b46a}</Project>
+      <Name>EmployeeManager.Models.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmployeeManager.Models.Usecases\EmployeeManager.Models.Usecases.csproj">
+      <Project>{68833f2f-10e7-4ee5-bfd0-e21c5099b56f}</Project>
+      <Name>EmployeeManager.Models.Usecases</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EmployeeManager.ViewModels\EmployeeManager.ViewModels.csproj">
       <Project>{06a11804-9651-4ea2-b9c3-bf84417b14a0}</Project>
       <Name>EmployeeManager.ViewModels</Name>

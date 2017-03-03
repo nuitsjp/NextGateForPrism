@@ -7,7 +7,7 @@ using Microsoft.Practices.Unity;
 namespace EmployeeManager.Droid
 {
     [Activity(Label = "EmployeeManager", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+    public class MainActivity : Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
         {
@@ -16,7 +16,7 @@ namespace EmployeeManager.Droid
 
             base.OnCreate(bundle);
 
-            global::Xamarin.Forms.Forms.Init(this, bundle);
+            Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new Application.App(new AndroidInitializer()));
         }
     }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Reflection;
 using NextGateForPrism.Tests.ViewModels;
 using NextGateForPrism.Tests.Views;
 using Xunit;

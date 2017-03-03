@@ -7,7 +7,7 @@ namespace EmployeeManager.UWP
     {
         public MainPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
 
             LoadApplication(new Application.App(new UwpInitializer()));
         }

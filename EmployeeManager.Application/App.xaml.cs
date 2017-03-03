@@ -1,13 +1,17 @@
-﻿using System.Reflection;
+﻿using EmployeeManager.Models.Services;
+using EmployeeManager.Models.Services.Local;
+using EmployeeManager.Models.Usecases;
 using EmployeeManager.ViewModels;
 using EmployeeManager.Views;
+using Microsoft.Practices.Unity;
 using NextGateForPrism;
 using Prism.Mvvm;
 using Prism.Unity;
+using Xamarin.Forms;
 
 namespace EmployeeManager.Application
 {
-    public partial class App : PrismApplication
+    public partial class App
     {
         public App(IPlatformInitializer initializer = null) : base(initializer) { }
 
@@ -22,12 +26,18 @@ namespace EmployeeManager.Application
         {
             InitializeComponent();
 
-            NavigationService.NavigateAsync<MainPageViewModel>();
+            NavigationService.NavigateAsync(new PageNavigation("NavigationPage"), new PageNavigation<MainPageViewModel>());
         }
 
         protected override void RegisterTypes()
         {
+            Container.RegisterType<IReferSections, ReferSections>(new ContainerControlledLifetimeManager());
+            Container.RegisterType<IEmployeeService, EmployeeService>(new ContainerControlledLifetimeManager());
+
+            Container.RegisterTypeForNavigation<NavigationPage>();
             Container.RegisterTypeForNavigation<MainPage>();
+            Container.RegisterTypeForNavigation<SectionListPage>();
+            Container.RegisterTypeForNavigation<SectionPage>();
         }
     }
 }

@@ -1,8 +1,6 @@
 ﻿using Microsoft.Practices.Unity;
 using Prism.Mvvm;
-using Prism.Navigation;
 using Prism.Unity;
-using Xamarin.Forms;
 
 namespace NextGateForPrism.Unity.Forms
 {

@@ -1,6 +1,7 @@
 ﻿using Prism.Mvvm;
 using System.Collections.Generic;
 using EmployeeManager.Models.Usecases;
+using NextGateForPrism;
 using Prism.Navigation;
 
 namespace EmployeeManager.ViewModels
@@ -35,7 +36,7 @@ namespace EmployeeManager.ViewModels
             var navigationParameter = new NavigationParameters();
             navigationParameter[SectionPageViewModel.SectionIdKey] = section.Id;
 
-            //_navigationService.NavigateAsync<SectionPageViewModel>(navigationParameter);
+            _navigationService.NavigateAsync<SectionPageViewModel>(navigationParameter);
         }
 
         public void OnNavigatedFrom(NavigationParameters parameters)
