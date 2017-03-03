@@ -14,8 +14,10 @@ namespace NextGateForPrism
             bool? useModalNavigation = null, 
             bool animated = true) where TViewModel : class 
         {
-            var name = PageNavigationTypeResolver.ResolveForViewType<TViewModel>();
-            return navigationService.NavigateAsync(name.Name, parameters, useModalNavigation, animated);
+            //var viewType = PageNavigationTypeResolver.ResolveForViewType<TViewModel>();
+            //return navigationService.NavigateAsync(viewType.Name, parameters, useModalNavigation, animated);
+            var name = PageNavigationNameResolver.Resolve<TViewModel>();
+            return navigationService.NavigateAsync(name, parameters, useModalNavigation, animated);
         }
 
         public static Task NavigateAsync(

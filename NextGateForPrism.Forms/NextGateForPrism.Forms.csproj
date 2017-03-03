@@ -38,6 +38,8 @@
   <ItemGroup>
     <Compile Include="NavigationServiceExtensions.cs" />
     <Compile Include="PageNavigation.cs" />
+    <Compile Include="PageNavigationAttribute.cs" />
+    <Compile Include="PageNavigationNameResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

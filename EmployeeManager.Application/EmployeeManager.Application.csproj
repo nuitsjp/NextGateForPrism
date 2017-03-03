@@ -110,6 +110,10 @@
       <Project>{a40e1aeb-ffc8-49fc-a844-a9f6dc226912}</Project>
       <Name>NextGateForPrism.Forms</Name>
     </ProjectReference>
+    <ProjectReference Include="..\NextGateForPrism.Unity.Forms\NextGateForPrism.Unity.Forms.csproj">
+      <Project>{384e4449-fd24-4a3f-884c-a96460948ad0}</Project>
+      <Name>NextGateForPrism.Unity.Forms</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NextGateForPrism\NextGateForPrism.csproj">
       <Project>{7614e658-f030-416b-8448-37412a1bb048}</Project>
       <Name>NextGateForPrism</Name>

@@ -8,7 +8,7 @@
     <ProjectGuid>{384E4449-FD24-4A3F-884C-A96460948AD0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NextGateForPrism.Unity.Forms</RootNamespace>
+    <RootNamespace>NextGateForPrism.Unity</RootNamespace>
     <AssemblyName>NextGateForPrism.Unity.Forms</AssemblyName>
     <DefaultLanguage>ja-JP</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
@@ -77,6 +77,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\NextGateForPrism.Forms\NextGateForPrism.Forms.csproj">
+      <Project>{a40e1aeb-ffc8-49fc-a844-a9f6dc226912}</Project>
+      <Name>NextGateForPrism.Forms</Name>
+    </ProjectReference>
     <ProjectReference Include="..\NextGateForPrism\NextGateForPrism.csproj">
       <Project>{7614e658-f030-416b-8448-37412a1bb048}</Project>
       <Name>NextGateForPrism</Name>

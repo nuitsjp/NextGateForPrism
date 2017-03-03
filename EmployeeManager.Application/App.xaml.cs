@@ -5,6 +5,7 @@ using EmployeeManager.ViewModels;
 using EmployeeManager.Views;
 using Microsoft.Practices.Unity;
 using NextGateForPrism;
+using NextGateForPrism.Unity;
 using Prism.Mvvm;
 using Prism.Unity;
 using Xamarin.Forms;
@@ -35,7 +36,8 @@ namespace EmployeeManager.Application
             Container.RegisterType<IEmployeeService, EmployeeService>(new ContainerControlledLifetimeManager());
 
             Container.RegisterTypeForNavigation<NavigationPage>();
-            Container.RegisterTypeForNavigation<MainPage>();
+            //Container.RegisterTypeForNavigation<MainPage>();
+            Container.RegisterTypeForNavigationFromViewModel<MainPageViewModel>();
             Container.RegisterTypeForNavigation<SectionListPage>();
             Container.RegisterTypeForNavigation<SectionPage>();
         }

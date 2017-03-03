@@ -5,6 +5,7 @@ using NextGateForPrism;
 
 namespace EmployeeManager.ViewModels
 {
+    [PageNavigation("m")]
     public class MainPageViewModel : BindableBase
     {
         public DelegateCommand NavigationSectionListCommand { get; }
@@ -23,7 +24,7 @@ namespace EmployeeManager.ViewModels
             DeepLinkByLiteralCommand =
                 new DelegateCommand(
                     () => navigationService.NavigateAsync(
-                        "/NavigationPage/MainPage/SectionListPage/SectionPage?sectionId=5"));
+                        "/NavigationPage/m/SectionListPage/SectionPage?sectionId=5"));
 
             DeepLinkByViewModelCommand = new DelegateCommand(() =>
             {

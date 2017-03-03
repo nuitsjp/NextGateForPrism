@@ -19,7 +19,8 @@ namespace NextGateForPrism
 
     public class PageNavigation<TViewModel> : PageNavigation where TViewModel : class 
     {
-        public PageNavigation() : base(PageNavigationTypeResolver.ResolveForViewType<TViewModel>().Name)
+        //public PageNavigation() : base(PageNavigationTypeResolver.ResolveForViewType<TViewModel>().Name)
+        public PageNavigation() : base(PageNavigationNameResolver.Resolve<TViewModel>())
         {
         }
     }

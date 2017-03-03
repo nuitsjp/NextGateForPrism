@@ -1,16 +1,17 @@
-﻿using Microsoft.Practices.Unity;
+﻿using System.Reflection;
+using Microsoft.Practices.Unity;
 using Prism.Mvvm;
 using Prism.Unity;
 
-namespace NextGateForPrism.Unity.Forms
+namespace NextGateForPrism.Unity
 {
     public static class UnityContainerExtensions
     {
-        public static IUnityContainer RegisterTypeForViewModelNavigation<TViewModel>(this IUnityContainer container) where TViewModel : class
+        public static IUnityContainer RegisterTypeForNavigationFromViewModel<TViewModel>(this IUnityContainer container) where TViewModel : class
         {
             var viewType = PageNavigationTypeResolver.ResolveForViewType<TViewModel>();
-            ViewModelLocationProvider.Register(viewType.ToString(), typeof(TViewModel));
-            return container.RegisterTypeForNavigation(viewType, viewType.Name);
+            var name = PageNavigationNameResolver.Resolve<TViewModel>();
+            return container.RegisterTypeForNavigation(viewType, name);
         }
     }
 }
