@@ -2,8 +2,8 @@
 {
     public static class DesignTimeViewModelLocator
     {
-        public static MainPageViewModel MainPageViewModel => default(MainPageViewModel);
-        public static SectionPageViewModel SectionPageViewModel => default(SectionPageViewModel);
-        public static SectionListPageViewModel SectionListPageViewModel => default(SectionListPageViewModel);
+        public static MainPageViewModel MainPage => null;
+        public static SectionPageViewModel SectionPage => null;
+        public static SectionListPageViewModel SectionListPage => null;
     }
 }
