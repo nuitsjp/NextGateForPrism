@@ -34,9 +34,9 @@ namespace EmployeeManager.ViewModels
         {
             // ReSharper disable once UseObjectOrCollectionInitializer
             var navigationParameter = new NavigationParameters();
-            navigationParameter[SectionPageViewModel.SectionIdKey] = section.Id;
+            navigationParameter.Add(SectionPageViewModel.SectionIdKey, section.Id);
 
-            _navigationService.NavigateAsync<SectionPageViewModel>(navigationParameter);
+            _navigationService.NavigateAsync<SectionDetailPageViewModel>(navigationParameter);
         }
 
         public void OnNavigatedFrom(NavigationParameters parameters)

@@ -5,9 +5,9 @@ using Xunit;
 
 namespace NextGateForPrism.Tests
 {
-    public class ViewTypeToViewModelTypeResolverFixture
+    public class PageNavigationTypeResolverFixture
     {
-        public ViewTypeToViewModelTypeResolverFixture()
+        public PageNavigationTypeResolverFixture()
         {
             PageNavigationTypeResolver.Clear();
         }
@@ -61,7 +61,6 @@ namespace NextGateForPrism.Tests
             var actual = PageNavigationTypeResolver.ResolveForViewType<TestPageViewModel>();
             Assert.Equal(typeof(TestPage), actual);
         }
-
 
         [Fact]
         public void Clear()

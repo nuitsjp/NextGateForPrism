@@ -28,8 +28,8 @@ namespace EmployeeManager.ViewModels
 
             DeepLinkByViewModelCommand = new DelegateCommand(() =>
             {
-                var sectionPageNavigation = new PageNavigation<SectionPageViewModel>();
-                sectionPageNavigation.Parameters[SectionPageViewModel.SectionIdKey] = 9;
+                var sectionPageNavigation = new PageNavigation<SectionDetailPageViewModel>();
+                sectionPageNavigation.Parameters.Add(SectionPageViewModel.SectionIdKey, 9);
 
                 navigationService.NavigateAsync(
                     new PageNavigation("NavigationPage"),

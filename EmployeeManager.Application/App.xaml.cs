@@ -39,7 +39,7 @@ namespace EmployeeManager.Application
             //Container.RegisterTypeForNavigation<MainPage>();
             Container.RegisterTypeForNavigationFromViewModel<MainPageViewModel>();
             Container.RegisterTypeForNavigation<SectionListPage>();
-            Container.RegisterTypeForNavigation<SectionPage>();
+            Container.RegisterTypeForNavigationFromViewModel<SectionPage, SectionDetailPageViewModel>();
         }
     }
 }
